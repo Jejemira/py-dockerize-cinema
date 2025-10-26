@@ -7,13 +7,13 @@ services:
     volumes:
       - my_db:$PGDATA
 
-  cinema:
+  app:
     build:
       context: .
     env_file:
       - .env
     ports:
-      - "8001:8000"
+      - "8000:8000"
     volumes:
       - ./:/app
       - my_media:/files/media
